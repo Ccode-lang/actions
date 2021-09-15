@@ -24,11 +24,6 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      - name: Setup Python
-        uses: actions/setup-python@v2.2.2
-        with:
-          python-version: 'pypy-3.6'
-          architecture: x64
       - name: install deps
         run: |
           sudo apt install build-essential nasm git subversion mtools meson m4 texinfo pkg-config groff gettext autopoint bison flex help2man libssl-dev gperf rsync xsltproc python3 python3-pip python3-mako wget xorriso qemu-system-x86
