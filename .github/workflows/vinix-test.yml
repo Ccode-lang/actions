@@ -26,6 +26,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: build
         run: |
+          sudo apt update
           sudo apt install --fix-missing build-essential nasm git subversion mtools meson m4 texinfo pkg-config groff gettext autopoint bison flex help2man libssl-dev gperf rsync xsltproc python3 python3-pip python3-mako wget xorriso qemu-system-x86
           git clone https://github.com/vlang/vinix.git
           pip3 install --user xbstrap
